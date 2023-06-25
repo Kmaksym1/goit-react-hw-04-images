@@ -31,7 +31,7 @@
   width: 128px;
 }
 .imageCard {
-  width: 100%;
+  width: auto;
   height: 280px;
   object-fit: cover;
 }

@@ -251,10 +251,10 @@
 // import { HTTP_ERR_MSG } from './constants';
 // import { LoadMore } from './imageGallery/loadMore';
 // import { Audio } from 'react-loader-spinner';
-// import { ErrorMessage } from './searchBar/errorMessage';
-// import { Notify } from 'notiflix';
+
+
 import React, { useState, useEffect, useRef } from 'react';
-import { Audio } from 'react-loader-spinner';
+// import { Audio } from 'react-loader-spinner';
 import { Notify } from 'notiflix';
 
 import { fetchSearch } from './api.js';
@@ -267,7 +267,7 @@ import { ErrorMessage } from './searchBar/errorMessage.jsx';
 
 function App() {
   const [images, setImages] = useState([]);
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [input, setInput] = useState('');
   const [pages, setPages] = useState(1);
@@ -289,7 +289,7 @@ function App() {
 
       try {
         abortCtrl.current = new AbortController();
-        setLoading(true);
+        // setLoading(true);
         setError(null);
 
         const fetchedImages = await fetchSearch(
@@ -330,7 +330,7 @@ function App() {
           setError(HTTP_ERR_MSG);
         }
       } finally {
-        setLoading(false);
+        // setLoading(false);
       }
     };
     if (input) {
@@ -349,7 +349,7 @@ function App() {
   const addPages = () => {
     setPages(prevPages => prevPages + 1);
   };
-
+console.log(images.length)
   return (
     <div
       style={{
@@ -360,7 +360,7 @@ function App() {
       }}
     >
       <SearchBar onInput={onSearch} />
-      {loading && (
+      {/* {loading && (
         <Audio
           width="auto"
           height="80"
@@ -370,7 +370,7 @@ function App() {
           wrapperStyle
           wrapperClass
         />
-      )}
+      )} */}
       {images.length > 0 && <ImageGallery images={images} />}
 
       {error && <ErrorMessage>{error}</ErrorMessage>}

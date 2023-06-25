@@ -1,5 +1,5 @@
 // import { Component } from "react";
-import css from "../imageGallery/image.module.css";
+import css from "./image.module.css";
 
 export const LoadMore =  (props) =>{
     return (

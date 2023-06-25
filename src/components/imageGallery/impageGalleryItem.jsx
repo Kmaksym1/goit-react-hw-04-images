@@ -1,4 +1,4 @@
-import css from "../imageGallery/image.module.css";
+import css from "./image.module.css";
 export const ImpageGalleryItem = ({ picture, getId }) => {
   const { id, webformatURL } = picture;
     const handleClick = (id) => {
