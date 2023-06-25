@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { ImpageGalleryItem } from './impageGalleryItem';
+import { ImpageGalleryItem } from './impageGalleryItem.jsx';
 import css from './image.module.css';
 
 import { Modale } from './modal';

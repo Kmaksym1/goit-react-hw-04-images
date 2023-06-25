@@ -247,10 +247,10 @@ import React, { useState, useEffect, useRef } from 'react';
 import { fetchSearch } from './api.js';
 import { SearchBar } from './searchBar/searchBar.jsx';
 import { ImageGallery } from './imageGallery/imageGallery.jsx';
-import { HTTP_ERR_MSG } from './constants';
-import { LoadMore } from './imageGallery/loadMore';
+import { HTTP_ERR_MSG } from './constants.jsx';
+import { LoadMore } from './imageGallery/loadMore.jsx';
 import { Audio } from 'react-loader-spinner';
-import { ErrorMessage } from './searchBar/errorMessage';
+import { ErrorMessage } from './searchBar/errorMessage.jsx';
 import { Notify } from 'notiflix';
 
 function App() {
