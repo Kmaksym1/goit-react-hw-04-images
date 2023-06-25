@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { ImpageGalleryItem } from './impageGalleryItem.jsx';
 import css from './image.module.css';
 
-import { Modale } from './modal';
+import { Modale } from './modal.jsx';
 
 export const ImageGallery = ({ images }) => {
   const [isModal, setModal] = useState(false);
