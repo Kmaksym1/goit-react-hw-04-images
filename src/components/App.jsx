@@ -20,7 +20,7 @@ function App() {
     setInput(onInput);
   };
   useEffect(() => {
-    setImages([]);
+
     setPages(1);
   }, [input]);
 
@@ -87,6 +87,11 @@ function App() {
     };
   }, [input, pages]);
 
+  // useEffect(() => {
+  //   setPages(1);
+  //   setImages([]);
+  
+  // }, [input]);
   const addPages = () => {
     setPages(prevPages => prevPages + 1);
   };
