@@ -19,6 +19,10 @@ function App() {
   const onSearch = onInput => {
     setInput(onInput);
   };
+  useEffect(() => {
+    setImages([]);
+    setPages(1);
+  }, [input]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -87,7 +91,6 @@ function App() {
     setPages(prevPages => prevPages + 1);
   };
 
-  console.log('input', input);
   return (
     <div
       style={{
@@ -98,19 +101,7 @@ function App() {
       }}
     >
       <SearchBar onInput={onSearch} />
-      {/* {loading && (
-        <Audio
-          width="auto"
-          height="80"
-          radius="9"
-          color="yellow"
-          ariaLabel="loading"
-          wrapperStyle
-          wrapperClass
-        />
-      )} */}
       {images.length > 0 && <ImageGallery images={images} />}
-
       {error && <ErrorMessage>{error}</ErrorMessage>}
       {isLoading && <LoadMore onClick={addPages} />}
     </div>
